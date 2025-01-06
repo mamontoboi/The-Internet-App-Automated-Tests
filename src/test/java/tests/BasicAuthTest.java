@@ -13,8 +13,9 @@ BasicAuthTest extends BaseTest {
         String username = "admin";
         String password = "admin";
 
-        var basicAuthPage = homePage.goToBasicAuth();
+        var basicAuthPage = homePage.goToBasicAuthPage();
         basicAuthPage.loginViaURL(username, password);
-        Assert.assertTrue(basicAuthPage.checkConfirmationText());
+        Assert.assertTrue(basicAuthPage.checkConfirmationText(),
+                "\n Confirmation text is not visible \n");
     }
 }

@@ -8,8 +8,15 @@ import java.time.Duration;
 
 public class WaitUtility extends Utility{
 
+    private static WebDriverWait waitForSeconds(int seconds){
+        return new WebDriverWait(driver, Duration.ofSeconds(seconds));
+    }
+
     public static void explicitWaitUntilAlertIsPresent(int seconds) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
-        wait.until(ExpectedConditions.alertIsPresent());
+        waitForSeconds(seconds).until(ExpectedConditions.alertIsPresent());
+    }
+
+    public static void explicitWaitUntilElementIsPresent(int seconds, By selector) {
+        waitForSeconds(seconds).until(ExpectedConditions.visibilityOfElementLocated(selector));
     }
 }

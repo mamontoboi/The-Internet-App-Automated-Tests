@@ -9,6 +9,7 @@ public class HomePage extends BasePage {
     private By entryAd = By.xpath("//a[text()='Entry Ad']");
     private By addRemoveElements = By.xpath("//a[@href='/add_remove_elements/']");
     private By inputs = By.cssSelector("a[href*='inputs']");
+    private By checkboxes = By.linkText("Checkboxes");
 
     public BasicAuthPage goToBasicAuthPage() {
         click(basicAuth);
@@ -28,5 +29,10 @@ public class HomePage extends BasePage {
     public InputsPage goToInputsPage() {
         click(inputs);
         return new InputsPage();
+    }
+
+    public CheckboxesPage goToCheckboxesPage() {
+        click(checkboxes);
+        return new CheckboxesPage();
     }
 }

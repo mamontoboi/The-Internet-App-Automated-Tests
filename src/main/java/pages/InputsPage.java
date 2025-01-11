@@ -1,15 +1,12 @@
 package pages;
 
-import base.BasePage;
-import net.bytebuddy.implementation.bytecode.Throw;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 
-import java.security.Key;
 
 import static utilities.ActionsUtility.sendKeys;
 
-public class InputsPage extends BasePage {
+public class InputsPage extends HomePage {
 
     private By inputField = By.cssSelector(".example input");
 

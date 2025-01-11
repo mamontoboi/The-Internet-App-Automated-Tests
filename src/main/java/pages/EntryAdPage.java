@@ -1,12 +1,11 @@
 package pages;
 
-import base.BasePage;
 import org.openqa.selenium.By;
 
 import static utilities.WaitUtility.explicitWaitUntilElementIsPresent;
 
 
-public class EntryAdPage extends BasePage {
+public class EntryAdPage extends HomePage {
 
     private By modalWindow = By.cssSelector("div.modal");
     private By modalWindowText = By.cssSelector("div.modal-body p");

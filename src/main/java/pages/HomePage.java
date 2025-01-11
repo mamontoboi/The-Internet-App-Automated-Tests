@@ -8,6 +8,7 @@ public class HomePage extends BasePage {
     private By basicAuth = By.xpath("//a[@href='/basic_auth']");
     private By entryAd = By.xpath("//a[text()='Entry Ad']");
     private By addRemoveElements = By.xpath("//a[@href='/add_remove_elements/']");
+    private By inputs = By.cssSelector("a[href*='inputs']");
 
     public BasicAuthPage goToBasicAuthPage() {
         click(basicAuth);
@@ -22,5 +23,10 @@ public class HomePage extends BasePage {
     public AddRemoveElementsPage goToAddRemoveElementsPage() {
         click(addRemoveElements);
         return new AddRemoveElementsPage();
+    }
+
+    public InputsPage goToInputsPage() {
+        click(inputs);
+        return new InputsPage();
     }
 }

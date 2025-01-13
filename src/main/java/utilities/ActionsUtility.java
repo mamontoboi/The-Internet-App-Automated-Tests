@@ -1,5 +1,6 @@
 package utilities;
 
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 public class ActionsUtility extends Utility{
@@ -10,5 +11,9 @@ public class ActionsUtility extends Utility{
 
     public static void sendKeys(CharSequence keys) {
         act().sendKeys(keys).perform();
+    }
+
+    public static void rightMouseButtonClick(WebElement element) {
+        act().contextClick(element).perform();
     }
 }

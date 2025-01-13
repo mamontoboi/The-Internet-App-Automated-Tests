@@ -10,6 +10,7 @@ public class HomePage extends BasePage {
     private By addRemoveElements = By.xpath("//a[@href='/add_remove_elements/']");
     private By inputs = By.cssSelector("a[href*='inputs']");
     private By checkboxes = By.linkText("Checkboxes");
+    private By contextMenu = By.cssSelector("[href$='context_menu']");
 
     public BasicAuthPage goToBasicAuthPage() {
         click(basicAuth);
@@ -34,5 +35,10 @@ public class HomePage extends BasePage {
     public CheckboxesPage goToCheckboxesPage() {
         click(checkboxes);
         return new CheckboxesPage();
+    }
+
+    public ContextMenuPage goToContextMenuPage() {
+        click(contextMenu);
+        return new ContextMenuPage();
     }
 }

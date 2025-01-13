@@ -11,6 +11,7 @@ public class HomePage extends BasePage {
     private By inputs = By.cssSelector("a[href*='inputs']");
     private By checkboxes = By.linkText("Checkboxes");
     private By contextMenu = By.cssSelector("[href$='context_menu']");
+    private By dropdown = By.cssSelector("li > [href='/dropdown']");
 
     public BasicAuthPage goToBasicAuthPage() {
         click(basicAuth);
@@ -40,5 +41,10 @@ public class HomePage extends BasePage {
     public ContextMenuPage goToContextMenuPage() {
         click(contextMenu);
         return new ContextMenuPage();
+    }
+
+    public DropdownPage goToDropdownPage() {
+        click(dropdown);
+        return new DropdownPage();
     }
 }

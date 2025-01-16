@@ -12,6 +12,7 @@ public class HomePage extends BasePage {
     private By checkboxes = By.linkText("Checkboxes");
     private By contextMenu = By.cssSelector("[href$='context_menu']");
     private By dropdown = By.cssSelector("li > [href='/dropdown']");
+    private By keyPresses = By.linkText("Key Presses");
 
     public BasicAuthPage goToBasicAuthPage() {
         click(basicAuth);
@@ -46,5 +47,10 @@ public class HomePage extends BasePage {
     public DropdownPage goToDropdownPage() {
         click(dropdown);
         return new DropdownPage();
+    }
+
+    public KeyPressesPage goToKeyPressesPage() {
+        click(keyPresses);
+        return new KeyPressesPage();
     }
 }

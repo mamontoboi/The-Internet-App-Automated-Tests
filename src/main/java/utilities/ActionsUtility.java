@@ -13,6 +13,10 @@ public class ActionsUtility extends Utility{
         act().sendKeys(keys).perform();
     }
 
+    public static void sendKeys(WebElement source, CharSequence keys) {
+        act().sendKeys(source, keys).perform();
+    }
+
     public static void rightMouseButtonClick(WebElement element) {
         act().contextClick(element).perform();
     }

@@ -19,4 +19,8 @@ public class WaitUtility extends Utility{
     public static void explicitWaitUntilElementIsPresent(int seconds, By selector) {
         waitForSeconds(seconds).until(ExpectedConditions.visibilityOfElementLocated(selector));
     }
+
+    public static void explicitWaitForCondition(int seconds, By selector, String attribute, String value) {
+        waitForSeconds(seconds).until(ExpectedConditions.attributeContains(selector, attribute, value));
+    }
 }

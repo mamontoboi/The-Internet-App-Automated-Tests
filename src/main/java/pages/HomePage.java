@@ -13,6 +13,7 @@ public class HomePage extends BasePage {
     private By contextMenu = By.cssSelector("[href$='context_menu']");
     private By dropdown = By.cssSelector("li > [href='/dropdown']");
     private By keyPresses = By.linkText("Key Presses");
+    private By dynamicLoading = By.xpath("//*[contains(@href,'dynamic_loading')]");
 
     public BasicAuthPage goToBasicAuthPage() {
         click(basicAuth);
@@ -52,5 +53,10 @@ public class HomePage extends BasePage {
     public KeyPressesPage goToKeyPressesPage() {
         click(keyPresses);
         return new KeyPressesPage();
+    }
+
+    public DynamicLoadingPage goToDynamicLoadingPage() {
+        click(dynamicLoading);
+        return new DynamicLoadingPage();
     }
 }

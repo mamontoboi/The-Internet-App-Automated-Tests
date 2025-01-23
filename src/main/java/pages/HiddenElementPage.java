@@ -29,15 +29,15 @@ public class HiddenElementPage extends DynamicLoadingPage {
     }
 
     public void startTheProcess() {
-            click(startButton);
+        click(startButton);
     }
 
     public void checkIfLoadingProcessHasStarted() {
-            explicitWaitUntilElementIsPresent(3, loadingBar);
+        explicitWaitUntilElementIsPresent(3, loadingBar);
     }
 
     public void waitUntilLoadingBarIsHidden() {
-            explicitWaitForCondition(10, loadingBar, "style", "display: none");
+        explicitWaitForCondition(10, loadingBar, "style", "display: none");
     }
 
 }

@@ -14,6 +14,7 @@ public class HomePage extends BasePage {
     private By dropdown = By.cssSelector("li > [href='/dropdown']");
     private By keyPresses = By.linkText("Key Presses");
     private By dynamicLoading = By.xpath("//*[contains(@href,'dynamic_loading')]");
+    private By exitIntent = By.cssSelector("li > [href='/exit_intent']");
 
     public BasicAuthPage goToBasicAuthPage() {
         click(basicAuth);
@@ -58,5 +59,10 @@ public class HomePage extends BasePage {
     public DynamicLoadingPage goToDynamicLoadingPage() {
         click(dynamicLoading);
         return new DynamicLoadingPage();
+    }
+
+    public ExitIntentPage goToExitIntentPage() {
+        click(exitIntent);
+        return new ExitIntentPage();
     }
 }

@@ -15,6 +15,7 @@ public class HomePage extends BasePage {
     private By keyPresses = By.linkText("Key Presses");
     private By dynamicLoading = By.xpath("//*[contains(@href,'dynamic_loading')]");
     private By exitIntent = By.cssSelector("li > [href='/exit_intent']");
+    private By horizontalSlider = By.cssSelector("[href*='horizontal_slider']");
 
     public BasicAuthPage goToBasicAuthPage() {
         click(basicAuth);
@@ -64,5 +65,10 @@ public class HomePage extends BasePage {
     public ExitIntentPage goToExitIntentPage() {
         click(exitIntent);
         return new ExitIntentPage();
+    }
+
+    public HorizontalSliderPage goToHorizontalSliderPage() {
+        click(horizontalSlider);
+        return new HorizontalSliderPage();
     }
 }

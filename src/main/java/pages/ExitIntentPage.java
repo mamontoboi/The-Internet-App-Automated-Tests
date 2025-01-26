@@ -3,7 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 
-import static utilities.MouseMovement.MoveCursorToTheUpperLeftCorner;
+import static utilities.MouseMovementUtility.MoveCursorToTheUpperLeftCorner;
 import static utilities.Utility.getWindowSize;
 import static utilities.WaitUtility.explicitWaitUntilElementIsPresent;
 

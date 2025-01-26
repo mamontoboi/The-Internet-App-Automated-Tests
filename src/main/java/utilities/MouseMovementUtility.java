@@ -2,7 +2,7 @@ package utilities;
 
 import java.awt.*;
 
-public class MouseMovement extends Utility{
+public class MouseMovementUtility extends Utility{
 
     public static void MoveCursorToTheUpperLeftCorner(int size_x, int size_y) {
         try {

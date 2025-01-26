@@ -20,4 +20,8 @@ public class ActionsUtility extends Utility{
     public static void rightMouseButtonClick(WebElement element) {
         act().contextClick(element).perform();
     }
+
+    public static void dragAndDropBy(WebElement source, int x, int y) {
+        act().dragAndDropBy(source, x, y).perform();
+    }
 }

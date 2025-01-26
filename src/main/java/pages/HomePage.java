@@ -16,6 +16,7 @@ public class HomePage extends BasePage {
     private By dynamicLoading = By.xpath("//*[contains(@href,'dynamic_loading')]");
     private By exitIntent = By.cssSelector("li > [href='/exit_intent']");
     private By horizontalSlider = By.cssSelector("[href*='horizontal_slider']");
+    private By dragAndDrop = By.xpath("//*[contains(text(), 'and Drop')]");
 
     public BasicAuthPage goToBasicAuthPage() {
         click(basicAuth);
@@ -70,5 +71,10 @@ public class HomePage extends BasePage {
     public HorizontalSliderPage goToHorizontalSliderPage() {
         click(horizontalSlider);
         return new HorizontalSliderPage();
+    }
+
+    public DragAndDropPage goToDragAndDropPage() {
+        click(dragAndDrop);
+        return new DragAndDropPage();
     }
 }

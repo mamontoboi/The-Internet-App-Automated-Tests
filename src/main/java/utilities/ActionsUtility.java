@@ -24,4 +24,8 @@ public class ActionsUtility extends Utility{
     public static void dragAndDropBy(WebElement source, int x, int y) {
         act().dragAndDropBy(source, x, y).perform();
     }
+
+    public static void dragAndDrop(WebElement source, WebElement target){
+        act().dragAndDrop(source, target).perform();
+    }
 }

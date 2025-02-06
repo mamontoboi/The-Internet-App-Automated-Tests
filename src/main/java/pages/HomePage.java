@@ -3,6 +3,8 @@ package pages;
 import base.BasePage;
 import org.openqa.selenium.By;
 
+import javax.management.Notification;
+
 public class HomePage extends BasePage {
 
     private By basicAuth = By.xpath("//a[@href='/basic_auth']");
@@ -17,6 +19,7 @@ public class HomePage extends BasePage {
     private By exitIntent = By.cssSelector("li > [href='/exit_intent']");
     private By horizontalSlider = By.cssSelector("[href*='horizontal_slider']");
     private By dragAndDrop = By.xpath("//*[contains(text(), 'and Drop')]");
+    private By notificationMessage = By.xpath("//*[text()='Notification Messages']");
 
     public BasicAuthPage goToBasicAuthPage() {
         click(basicAuth);
@@ -76,5 +79,10 @@ public class HomePage extends BasePage {
     public DragAndDropPage goToDragAndDropPage() {
         click(dragAndDrop);
         return new DragAndDropPage();
+    }
+
+    public NotificationMessagePage goToNotificationMessagePage() {
+        click(notificationMessage);
+        return new NotificationMessagePage();
     }
 }

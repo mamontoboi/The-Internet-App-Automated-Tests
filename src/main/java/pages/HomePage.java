@@ -20,6 +20,7 @@ public class HomePage extends BasePage {
     private By horizontalSlider = By.cssSelector("[href*='horizontal_slider']");
     private By dragAndDrop = By.xpath("//*[contains(text(), 'and Drop')]");
     private By notificationMessage = By.xpath("//*[text()='Notification Messages']");
+    private By frames = By.xpath("//*[text()='Frames']");
 
     public BasicAuthPage goToBasicAuthPage() {
         click(basicAuth);
@@ -84,5 +85,10 @@ public class HomePage extends BasePage {
     public NotificationMessagePage goToNotificationMessagePage() {
         click(notificationMessage);
         return new NotificationMessagePage();
+    }
+
+    public FramesPage goToFramesPage() {
+        click(frames);
+        return new FramesPage();
     }
 }

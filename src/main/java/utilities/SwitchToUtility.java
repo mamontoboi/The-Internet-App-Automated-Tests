@@ -3,6 +3,7 @@ package utilities;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import static utilities.ActionsUtility.sendKeys;
 import static utilities.WaitUtility.explicitWaitUntilAlertIsPresent;
@@ -24,5 +25,13 @@ public class SwitchToUtility extends Utility{
     public static void acceptAlert() {
         explicitWaitUntilAlertIsPresent(5);
         switchTo().alert().accept();
+    }
+
+    public static void switchToFrameElement(WebElement element) {
+        switchTo().frame(element);
+    }
+
+    public static void switchToDefaultContent() {
+        switchTo().defaultContent();
     }
 }

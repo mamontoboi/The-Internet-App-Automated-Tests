@@ -1,12 +1,15 @@
 package base;
 
-import base.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
+
+import java.io.File;
+import java.util.HashMap;
 
 import static utilities.Utility.setUtilityDriver;
 
@@ -17,7 +20,13 @@ public class BaseTest {
 
     @BeforeClass
     public void setUp() {
-        driver = new ChromeDriver();
+        HashMap<String, Object> chromePrefs = new HashMap<>();
+        chromePrefs.put("download.default_directory", System.getProperty("user.dir"));
+        System.out.println(System.getProperty("user.dir"));
+        ChromeOptions options = new ChromeOptions();
+        options.setExperimentalOption("prefs", chromePrefs);
+
+        driver = new ChromeDriver(options);
         driver.manage().window().maximize();
     }
 

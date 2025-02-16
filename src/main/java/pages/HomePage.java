@@ -19,6 +19,7 @@ public class HomePage extends BasePage {
     private By dragAndDrop = By.xpath("//*[contains(text(), 'and Drop')]");
     private By notificationMessage = By.xpath("//*[text()='Notification Messages']");
     private By frames = By.xpath("//*[text()='Frames']");
+    private By fileDownload = By.cssSelector("[href$='download']");
 
     public BasicAuthPage goToBasicAuthPage() {
         click(basicAuth);
@@ -88,5 +89,10 @@ public class HomePage extends BasePage {
     public FramesPage goToFramesPage() {
         click(frames);
         return new FramesPage();
+    }
+
+    public FileDownloadPage goToFileDownloadPage() {
+        click(fileDownload);
+        return new FileDownloadPage();
     }
 }
